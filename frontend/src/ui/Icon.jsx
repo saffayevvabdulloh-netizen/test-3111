@@ -1,0 +1,60 @@
+const P = {
+  home: "M3 11l9-7 9 7v9a1 1 0 01-1 1h-5v-6H9v6H4a1 1 0 01-1-1z",
+  play: "M7 4l13 8-13 8z",
+  book: "M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4zM20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z",
+  trophy: "M8 4h8v6a4 4 0 01-8 0zM8 6H4v1a4 4 0 004 4M16 6h4v1a4 4 0 01-4 4M12 14v4M8 21h8",
+  user: "M12 12a4 4 0 100-8 4 4 0 000 8zM4 21a8 8 0 0116 0",
+  plus: "M12 5v14M5 12h14",
+  edit: "M4 20h4L19 9l-4-4L4 16zM13 7l4 4",
+  trash: "M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3",
+  copy: "M9 9h11v11H9zM5 15V5h10",
+  check: "M5 12.5l4.5 4.5L19 7",
+  x: "M6 6l12 12M18 6L6 18",
+  "arrow-left": "M19 12H5M11 6l-6 6 6 6",
+  "arrow-right": "M5 12h14M13 6l6 6-6 6",
+  clock: "M12 21a9 9 0 100-18 9 9 0 000 18zM12 7v5l3 2",
+  "sound-on": "M4 9v6h4l5 4V5L8 9zM17 8.5a5 5 0 010 7M19.5 6a8.5 8.5 0 010 12",
+  "sound-off": "M4 9v6h4l5 4V5L8 9zM17 9l5 6M22 9l-5 6",
+  menu: "M4 7h16M4 12h16M4 17h16",
+  users: "M9 11a3.5 3.5 0 100-7 3.5 3.5 0 000 7zM2 20a7 7 0 0114 0M16 4.5a3.5 3.5 0 010 6.5M18 14a7 7 0 013 6",
+  class: "M3 5h18v11H3zM8 20h8M12 16v4",
+  chart: "M4 20V10M10 20V4M16 20v-7M22 20H2",
+  upload: "M12 16V4M7 9l5-5 5 5M4 20h16",
+  image: "M3 5h18v14H3zM3 16l5-5 4 4 3-3 6 6M9 9.5v.01",
+  up: "M12 19V5M6 11l6-6 6 6",
+  down: "M12 5v14M6 13l6 6 6-6",
+  download: "M12 4v11M7 11l5 5 5-5M5 20h14",
+  sliders: "M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0M14 4v4M8 10v4M16 16v4",
+  eye: "M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12zM12 15a3 3 0 100-6 3 3 0 000 6z",
+  send: "M21 3L3 11l7 3 3 7zM10 14l5-5",
+  logout: "M9 4H5v16h4M16 8l4 4-4 4M20 12H9",
+  search: "M11 18a7 7 0 100-14 7 7 0 000 14zM21 21l-5-5",
+  star: "M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6.1L12 16.6 6.6 19.6l1.2-6.1L3.3 9.3l6.1-.7z",
+  lock: "M6 11h12v9H6zM8 11V8a4 4 0 018 0v3",
+  info: "M12 21a9 9 0 100-18 9 9 0 000 18zM12 11v6M12 7.5v.01",
+  alert: "M12 3l10 18H2zM12 10v5M12 17.5v.01",
+  refresh: "M20 11a8 8 0 10-2.3 6M20 5v6h-6",
+  archive: "M3 5h18v4H3zM5 9v11h14V9M10 13h4",
+  gamepad: "M6 8h12a4 4 0 014 4v2a3 3 0 01-5.2 2L15 14H9l-1.8 2A3 3 0 012 14v-2a4 4 0 014-4zM8 11v3M6.5 12.5h3M16 11.5v.01M18 13.5v.01",
+  link: "M10 14a4 4 0 005.7 0l3-3a4 4 0 00-5.7-5.7l-1 1M14 10a4 4 0 00-5.7 0l-3 3a4 4 0 005.7 5.7l1-1",
+  calendar: "M4 6h16v14H4zM4 10h16M8 3v4M16 3v4",
+  "chevron-down": "M6 9l6 6 6-6",
+  "chevron-up": "M6 15l6-6 6 6",
+  flag: "M5 21V4M5 4h12l-2 4 2 4H5",
+  "eye-off": "M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12zM12 15a3 3 0 100-6 3 3 0 000 6zM3 3l18 18",
+  mic: "M12 15a3 3 0 003-3V6a3 3 0 00-6 0v6a3 3 0 003 3zM6 11a6 6 0 0012 0M12 17v4M9 21h6",
+  "mic-off": "M12 15a3 3 0 003-3V6a3 3 0 00-6 0v6a3 3 0 003 3zM6 11a6 6 0 0012 0M12 17v4M9 21h6M3 3l18 18",
+  heart: "M12 20s-7-4.4-7-10a4 4 0 017-2.6A4 4 0 0119 10c0 5.6-7 10-7 10z",
+  camera: "M4 8h3l2-3h6l2 3h3v11H4zM12 17a3.5 3.5 0 100-7 3.5 3.5 0 000 7z",
+  puzzle: "M10 4a2 2 0 114 0v2h4v4h-2a2 2 0 100 4h2v4h-4v-2a2 2 0 10-4 0v2H6v-4h2a2 2 0 100-4H6V6h4z",
+  smile: "M12 21a9 9 0 100-18 9 9 0 000 18zM8.5 14a4.5 4.5 0 007 0M9 9.5v.01M15 9.5v.01",
+};
+
+export default function Icon({ name, size = 22, stroke = 2.5, className = "", ...rest }) {
+  return (
+    <svg className={`icon ${className}`} width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      strokeWidth={stroke} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false" {...rest}>
+      <path d={P[name] || P.info} />
+    </svg>
+  );
+}

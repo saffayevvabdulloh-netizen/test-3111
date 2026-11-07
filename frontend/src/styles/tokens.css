@@ -1,0 +1,44 @@
+:root {
+  /* ink + paper */
+  --ink: #1f2a52;
+  --ink-2: #55618a;
+  --ink-3: #8b95b8;
+  --cream: #eef7ff;
+  --paper: #ffffff;
+  --line: #e3ebf7;
+  --line-strong: #cfdcf0;
+  --edge: #d6e2f5;        /* soft outline (replaces the old hard ink outline) */
+  --edge-dk: #bccbe6;     /* bottom edge of "candy" buttons / cards */
+
+  /* signature colours (ink text always sits on them: contrast >= 4.5) */
+  --emerald: #38d487;
+  --emerald-hi: #5fe3a0;
+  --emerald-dk: #1f9f60;
+  --emerald-soft: #dcf8ea;
+  --sun: #ffc93c;
+  --sun-dk: #d99c0a;
+  --sun-soft: #fff1c4;
+  --coral: #ff7a6b;
+  --coral-dk: #d9503f;
+  --coral-soft: #ffe3df;
+  --sky: #4aa3ff;
+  --sky-dk: #2578d6;
+  --sky-soft: #dcecff;
+  --grape: #9b82ff;
+  --grape-dk: #6f55d6;
+  --grape-soft: #ebe4ff;
+
+  --r-s: 12px;
+  --r-m: 18px;
+  --r-l: 28px;
+  --bw: 3px;
+  --shadow-hard: 0 4px 0 var(--edge-dk);
+  --shadow-soft: 0 12px 30px rgba(40, 70, 120, 0.10);
+
+  --font-body: "Nunito Variable", "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-head: "Baloo 2", "Nunito Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --nav-h: 68px;
+  --safe-b: env(safe-area-inset-bottom, 0px);
+  --safe-t: env(safe-area-inset-top, 0px);
+}

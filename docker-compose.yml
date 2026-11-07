@@ -1,0 +1,52 @@
+# docker compose up -d --build      ->  http://localhost:8000
+# Needs a .env next to this file (copy .env.example).
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-zumrad}
+      POSTGRES_USER: ${POSTGRES_USER:-zumrad}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  web:
+    build: .
+    image: zumrad-app
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      DEBUG: "False"
+      RUN_TELEGRAM_BOT: "False"      # the bot has its own container below
+      DATABASE_URL: postgres://${POSTGRES_USER:-zumrad}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-zumrad}
+    ports:
+      - "${PORT:-8000}:8000"
+    volumes:
+      - media:/app/backend/media
+    depends_on:
+      db:
+        condition: service_healthy
+
+  bot:
+    image: zumrad-app
+    restart: unless-stopped
+    command: python manage.py run_telegram_bot
+    env_file: .env
+    environment:
+      DEBUG: "False"
+      DATABASE_URL: postgres://${POSTGRES_USER:-zumrad}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-zumrad}
+    depends_on:
+      db:
+        condition: service_healthy
+      web:
+        condition: service_started
+
+volumes:
+  pgdata:
+  media:
